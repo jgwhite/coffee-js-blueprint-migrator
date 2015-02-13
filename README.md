@@ -1,25 +1,23 @@
 # Coffee-js-blueprint-migrator
 
-This README outlines the details of collaborating on this Ember addon.
+A giant hack to allow switching between coffeescript and javascript blueprints.
 
-## Installation
+## Usage
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+To make a particular blueprint migration-capable, generate a migration blueprint for it:
 
-## Running
+```
+$ ember g migration-blueprint controller
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Now you can generate the coffeescript blueprint as follows:
 
-## Running Tests
+```
+$ ember g controller foo
+```
 
-* `ember test`
-* `ember test --server`
+And the javascript version like this:
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```
+$ ember g controller foo --javascript
+```
